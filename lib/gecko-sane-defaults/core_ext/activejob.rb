@@ -3,7 +3,7 @@
 # No need to log error backtraces, they're already sent to Honeybadger
 # See https://github.com/rails/rails/blob/master/activejob/lib/active_job/logging.rb
 
-if ActiveJob::VERSION::STRING.in?(["5.2.2.1", "5.3.0"])
+if ActiveJob::VERSION::STRING.in?(["5.1.6.2", "5.1.7", "5.2.2.1", "5.3.0"])
   module ActiveJobLogExt
     def perform(event)
       job = event.payload[:job]
@@ -23,5 +23,5 @@ if ActiveJob::VERSION::STRING.in?(["5.2.2.1", "5.3.0"])
   require 'active_job/base'
   ActiveJob::Logging::LogSubscriber.include(ActiveJobLogExt)
 else
-  Rails.logger.warn("Could not find monkey-patch for activejob-#{ActiveJob::VERSION::STRING} in tradegecko-sane-defaults.")
+  puts("Could not find monkey-patch for activejob-#{ActiveJob::VERSION::STRING} in tradegecko-sane-defaults.")
 end
