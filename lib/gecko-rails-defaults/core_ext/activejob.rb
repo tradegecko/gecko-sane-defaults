@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # No need to log error backtraces, they're already sent to Honeybadger
 # See https://github.com/rails/rails/blob/master/activejob/lib/active_job/logging.rb
 

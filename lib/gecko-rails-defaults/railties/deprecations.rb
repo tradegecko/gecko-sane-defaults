@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module GeckoRailsDefaults
   class Deprecations < Rails::Railtie
     initializer 'gecko-rails-defaults.deprecations' do |app|

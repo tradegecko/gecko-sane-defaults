@@ -1,5 +1,8 @@
-# Add # frozen_string_literal: true to all generated migrations
+# frozen_string_literal: true
+
+# Add `# frozen_string_literal: true` to all generated migrations
 # See https://gist.github.com/ta1kt0me/6a7058d16621785d4f7038bde6cd3b98
+
 module GeckoRailsDefaults
   module AddFrozenStringLiteralComment
     def add_frozen_string_literal_comment(dist)
