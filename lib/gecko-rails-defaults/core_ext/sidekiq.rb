@@ -11,4 +11,6 @@ module GeckoRailsDefaults
   end
 end
 
+require 'sidekiq'
+
 Sidekiq::ExceptionHandler::Logger.include(GeckoRailsDefaults::SidekiqLogger)
