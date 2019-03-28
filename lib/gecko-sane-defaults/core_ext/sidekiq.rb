@@ -15,4 +15,4 @@ end
 
 require 'sidekiq/exception_handler'
 
-Sidekiq::ExceptionHandler::Logger.include(GeckoSaneDefaults::SidekiqLogger)
+Sidekiq::ExceptionHandler::Logger.prepend(GeckoSaneDefaults::SidekiqLogger)
