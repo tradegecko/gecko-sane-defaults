@@ -11,4 +11,5 @@ Gem::Specification.new do |s|
   s.files       = ['lib/gecko-rails-defaults.rb']
   s.homepage    = 'http://rubygems.org/gems/gecko-rails-defaults'
   s.license     = 'MIT'
+  s.authors     = ["Bradley Priest"]
 end
