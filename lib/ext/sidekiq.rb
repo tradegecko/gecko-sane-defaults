@@ -1,3 +1,6 @@
+# No need to log error backtraces, they're already sent to Honeybadger
+# See https://github.com/rails/rails/blob/master/activejob/lib/active_job/logging.rb
+
 module GeckoRailsDefaults
   module SidekiqLogger
     def call(ex, ctxHash)
