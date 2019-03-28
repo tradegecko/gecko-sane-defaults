@@ -3,7 +3,7 @@
 # No need to log error backtraces, they're already sent to Honeybadger
 # See https://github.com/rails/rails/blob/master/activejob/lib/active_job/logging.rb
 
-module GeckoRailsDefaults
+module GeckoSaneDefaults
   module SidekiqLogger
     def call(ex, ctxHash)
       Sidekiq.logger.warn(Sidekiq.dump_json(ctxHash)) if !ctxHash.empty?
@@ -15,4 +15,4 @@ end
 
 require 'sidekiq/exception_handler'
 
-Sidekiq::ExceptionHandler::Logger.include(GeckoRailsDefaults::SidekiqLogger)
+Sidekiq::ExceptionHandler::Logger.include(GeckoSaneDefaults::SidekiqLogger)

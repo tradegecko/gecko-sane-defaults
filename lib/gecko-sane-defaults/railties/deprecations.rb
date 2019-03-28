@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module GeckoRailsDefaults
+module GeckoSaneDefaults
   class Deprecations < Rails::Railtie
-    initializer 'gecko-rails-defaults.deprecations' do |app|
+    initializer 'gecko-sane-defaults.deprecations' do |app|
       if Rails.env.production?
         app.config.active_support.deprecation = lambda { |message, callstack|
           ex = ActiveSupport::DeprecationException.new(message)

@@ -1,4 +1,4 @@
-## TradeGecko Rails Defaults
+## TradeGecko Sane Defaults
 Shared sane defaults across TG apps
 
 #### Current defaults:

@@ -23,5 +23,5 @@ if ActiveJob::VERSION::STRING.in?(["5.2.2.1", "5.3.0"])
   require 'active_job/base'
   ActiveJob::Logging::LogSubscriber.include(ActiveJobLogExt)
 else
-  Rails.logger.warn("Could not find monkey-patch for activejob-#{ActiveJob::VERSION::STRING} in tradegecko-rails-defaults.")
+  Rails.logger.warn("Could not find monkey-patch for activejob-#{ActiveJob::VERSION::STRING} in tradegecko-sane-defaults.")
 end
