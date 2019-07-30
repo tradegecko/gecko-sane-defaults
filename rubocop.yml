@@ -72,6 +72,10 @@ Style/BracesAroundHashParameters:
   Enabled: false
 
 # Context-dependent
+Style/DoubleNegation:
+  Enabled: false
+
+# Context-dependent
 Style/EmptyMethod:
   Enabled: false
 
