@@ -29,3 +29,34 @@ Layout/AccessModifierIndentation:
 Layout/AlignHash:
   EnforcedColonStyle: table
   EnforcedHashRocketStyle: table
+
+# array = [
+#   :value
+# ]
+Layout/IndentFirstArrayElement:
+  EnforcedStyle: consistent
+
+# hash = {
+#   key: :value
+# }
+# and_in_a_method_call({
+#   no: :difference
+# })
+Layout/IndentFirstHashElement:
+  EnforcedStyle: consistent
+
+#################
+# Disabled Cops #
+#################
+
+# Cannot work out how to enforce braces in multi-line hash, whilst removing them in single-line.
+Style/BracesAroundHashParameters:
+  Enabled: false
+
+# Context-dependent
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+# Context-dependent
+Style/TrailingCommaInHashLiteral: 
+  Enabled: false
