@@ -45,6 +45,9 @@ Layout/IndentFirstArrayElement:
 Layout/IndentFirstHashElement:
   EnforcedStyle: consistent
 
+Metrics/LineLength:
+  Max: 120
+
 #################
 # Disabled Cops #
 #################
