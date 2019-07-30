@@ -60,6 +60,7 @@ Style/Documentation:
     - app/helpers/**/*
     - app/jobs/**/*
     - config/**/*
+    - db/**/*
     - spec/**/*
     - test/**/*
 
