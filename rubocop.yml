@@ -53,6 +53,14 @@ Metrics/LineLength:
 Naming/RescuedExceptionsVariableName:
   PreferredName: ex
 
+Style/Documentation:
+  Exclude:
+    - app/controllers/**/*
+    - app/helpers/**/*
+    - app/jobs/**/*
+    - spec/**/*
+    - test/**/*
+
 #################
 # Disabled Cops #
 #################
