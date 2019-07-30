@@ -5,7 +5,6 @@ AllCops:
   TargetRubyVersion: 2.6
   DisplayStyleGuide: true
   Exclude:
-    - config/**/*
     - bin/**/*
     - db/schema.rb
     - node_modules/**/*
@@ -60,6 +59,7 @@ Style/Documentation:
     - app/controllers/**/*
     - app/helpers/**/*
     - app/jobs/**/*
+    - config/**/*
     - spec/**/*
     - test/**/*
 
