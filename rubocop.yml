@@ -1,0 +1,32 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.5
+  DisplayStyleGuide: true
+  Exclude:
+    - db/schema.rb
+    - node_modules/**/*
+    - vendor/**/*
+    - .git/**/*
+
+################################
+# Override Default Cop Options #
+################################
+
+# class Example
+#
+# private
+#   
+# end
+Layout/AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+# {
+#   foo: bar,
+#   ba:  baz
+# }
+Layout/AlignHash:
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
