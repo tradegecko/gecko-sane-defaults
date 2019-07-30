@@ -45,8 +45,13 @@ Layout/IndentFirstArrayElement:
 Layout/IndentFirstHashElement:
   EnforcedStyle: consistent
 
+# Bump default from 80 - 120 chars
 Metrics/LineLength:
   Max: 120
+
+# Prefer `rescue => ex`
+Naming/RescuedExceptionsVariableName:
+  PreferredName: ex
 
 #################
 # Disabled Cops #
