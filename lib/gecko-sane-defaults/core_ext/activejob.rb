@@ -3,7 +3,7 @@
 # No need to log error backtraces, they're already sent to Honeybadger
 # See https://github.com/rails/rails/blob/master/activejob/lib/active_job/logging.rb
 
-if ActiveJob::VERSION::STRING.in?(["5.2.3", "6.0.0.rc1"])
+if ActiveJob::VERSION::STRING.in?(["5.2.3", "6.0.0.rc2"])
   module ActiveJobLogExt
     def perform(event)
       job = event.payload[:job]
