@@ -81,6 +81,10 @@ Style/DoubleNegation:
 Style/EmptyMethod:
   Enabled: false
 
+# Context-dependent
+Style/IfUnlessModifier:
+  Enabled: false
+
 # Not sure whether to switch default or ignore
 Style/SymbolArray:
   Enabled: false
