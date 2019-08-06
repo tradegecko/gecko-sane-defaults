@@ -55,6 +55,11 @@ Metrics/LineLength:
 Naming/RescuedExceptionsVariableName:
   PreferredName: ex
 
+# Allow short but clear param names
+Naming::UncommunicativeMethodParamName:
+  AllowedNames:
+    - cc
+
 Style/Documentation:
   Exclude:
     - app/controllers/**/*
