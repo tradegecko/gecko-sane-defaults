@@ -47,6 +47,10 @@ Layout/IndentFirstArrayElement:
 Layout/IndentFirstHashElement:
   EnforcedStyle: consistent
 
+# Allow rescuing and no-op-ing
+Lint/HandleExceptions:
+  AllowComments: true
+
 # Bump default from 80 - 120 chars
 Metrics/LineLength:
   Max: 120
