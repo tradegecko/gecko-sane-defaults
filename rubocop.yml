@@ -59,6 +59,7 @@ Naming/RescuedExceptionsVariableName:
 Naming/UncommunicativeMethodParamName:
   AllowedNames:
     - cc
+    - to
 
 Style/Documentation:
   Exclude:
