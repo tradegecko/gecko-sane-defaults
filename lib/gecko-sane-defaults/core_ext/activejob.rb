@@ -23,5 +23,5 @@ if ActiveJob::VERSION::STRING.in?(["5.2.3", "6.0.0.rc2"])
   require 'active_job/base'
   ActiveJob::Logging::LogSubscriber.prepend(ActiveJobLogExt)
 else
-  puts("Could not find monkey-patch for activejob-#{ActiveJob::VERSION::STRING} in tradegecko-sane-defaults.")
+  puts("Could not find monkey-patch for activejob-#{ActiveJob::VERSION::STRING} in gecko-sane-defaults.")
 end
