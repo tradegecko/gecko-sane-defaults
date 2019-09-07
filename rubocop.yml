@@ -7,6 +7,7 @@ AllCops:
     - bin/**/*
     - db/schema.rb
     - frontend/**/*
+    - Gemfile.lock
     - node_modules/**/*
     - tmp/**/*
     - vendor/**/*
@@ -19,7 +20,7 @@ AllCops:
 # class Example
 #
 # private
-#   
+#
 # end
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
@@ -110,5 +111,5 @@ Style/TrailingCommaInArrayLiteral:
   Enabled: false
 
 # Context-dependent
-Style/TrailingCommaInHashLiteral: 
+Style/TrailingCommaInHashLiteral:
   Enabled: false
