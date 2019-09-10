@@ -1,0 +1,38 @@
+#!/bin/bash
+
+current_ruby=$(ruby -v)
+current_bundler=$(cat Gemfile.lock | grep -A 1 "BUNDLED WITH" | grep "[0-9.]")
+system_ruby=$(cat Gemfile | grep "ruby " | head -1 | awk '{ print $2 }' |  sed "s/[', ]//g")
+
+echo "Ruby on Machine: $current_ruby"
+echo "Ruby in Gemfile: $system_ruby"
+echo "Bundler in Gemfile: $current_bundler"
+
+if [[ $current_ruby = *$system_ruby* ]]; then
+  echo "Ruby $system_ruby is already setup. Skipping..."
+elif rbenv versions | grep $system_ruby; then
+  echo "Ruby $current_ruby was found on this machine."
+  echo "Setting rbenv to version $system_ruby."
+  rbenv local $system_ruby
+  gem install bundler -v $current_bundler --no-document
+  gem install semaphore_test_boosters --no-document
+elif [ -d "$SEMAPHORE_CACHE_DIR/ruby-cache/$system_ruby" ]; then
+  echo "Ruby $current_ruby was found in the cache."
+  echo "Copying from cache and setting rbenv to version $system_ruby."
+  rm -f ~/.rbenv/versions/$system_ruby
+  cp -R $SEMAPHORE_CACHE_DIR/ruby-cache/$system_ruby ~/.rbenv/versions/
+  rbenv local $system_ruby
+  gem install bundler $current_bundler --no-document
+  gem install semaphore_test_boosters --no-document
+else
+  echo "Ruby $system_ruby was not found in cache."
+  echo "Installing and setting rbenv to version $system_ruby."
+  cd ~/.rbenv/plugins/ruby-build && git pull && cd $SEMAPHORE_PROJECT_DIR
+  rbenv install $system_ruby
+  rbenv local $system_ruby
+  gem install bundler -v $current_bundler --no-document
+  gem install semaphore_test_boosters --no-document
+  echo "Copying Ruby $system_ruby to cache."
+  mkdir -p $SEMAPHORE_CACHE_DIR/ruby-cache
+  cp -R ~/.rbenv/versions/$system_ruby $SEMAPHORE_CACHE_DIR/ruby-cache/
+fi
