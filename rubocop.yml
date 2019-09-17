@@ -1,11 +1,13 @@
 require:
   - rubocop-rails
+  - rubocop-performance
 
 AllCops:
   DisplayStyleGuide: true
   Exclude:
     - bin/**/*
     - db/schema.rb
+    - db/secondary_schema.rb
     - frontend/**/*
     - Gemfile.lock
     - node_modules/**/*
