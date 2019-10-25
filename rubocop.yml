@@ -68,6 +68,7 @@ Naming/UncommunicativeMethodParamName:
     - cc
     - to
     - id
+    - ip
 
 Style/Documentation:
   Exclude:
