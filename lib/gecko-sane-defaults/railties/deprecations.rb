@@ -9,7 +9,7 @@ module GeckoSaneDefaults
           ex.set_backtrace(callstack.map(&:to_s))
           Honeybadger.notify(ex)
         }
-      else
+      elsif !Rails.env.test?
         app.config.active_support.deprecation = :raise
       end
     end
