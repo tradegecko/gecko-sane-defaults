@@ -70,22 +70,16 @@ Naming/UncommunicativeMethodParamName:
     - id
     - ip
 
-Style/Documentation:
-  Exclude:
-    - app/controllers/**/*
-    - app/helpers/**/*
-    - app/jobs/**/*
-    - config/**/*
-    - db/**/*
-    - spec/**/*
-    - test/**/*
-
 #################
 # Disabled Cops #
 #################
 
 # Cannot work out how to enforce braces in multi-line hash, whilst removing them in single-line.
 Style/BracesAroundHashParameters:
+  Enabled: false
+
+# I (Bradley) lost this battle, documentation is now optional.
+Style/Documentation:
   Enabled: false
 
 # Context-dependent
