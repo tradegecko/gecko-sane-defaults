@@ -70,6 +70,9 @@ Naming/UncommunicativeMethodParamName:
     - id
     - ip
 
+Performance/OpenStruct:
+  Enabled: true
+
 #################
 # Disabled Cops #
 #################
