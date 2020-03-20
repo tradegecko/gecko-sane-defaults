@@ -81,6 +81,10 @@ Performance/OpenStruct:
 Style/BracesAroundHashParameters:
   Enabled: false
 
+# This rule rarely makes things more readable
+Style/ConditionalAssignment:
+  Enabled: false
+
 # I (Bradley) lost this battle, documentation is now optional.
 Style/Documentation:
   Enabled: false
