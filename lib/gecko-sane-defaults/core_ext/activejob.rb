@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-if ActiveJob::VERSION::STRING.in?(["5.2.4.1", "6.0.2.1"])
+if ActiveJob::VERSION::STRING.in?(['5.2.4.1', '6.0.2.2'])
   # No need to log error backtraces, they're already sent to Honeybadger
   # See https://github.com/rails/rails/blob/master/activejob/lib/active_job/log_subscriber.rb
   module ActiveJobLogExt
