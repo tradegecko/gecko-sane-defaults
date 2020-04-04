@@ -31,14 +31,14 @@ Layout/AccessModifierIndentation:
 #   foo: bar,
 #   ba:  baz
 # }
-Layout/AlignHash:
+Layout/HashAlignment:
   EnforcedColonStyle: table
   EnforcedHashRocketStyle: table
 
 # array = [
 #   :value
 # ]
-Layout/IndentFirstArrayElement:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
 # hash = {
@@ -47,23 +47,23 @@ Layout/IndentFirstArrayElement:
 # and_in_a_method_call({
 #   no: :difference
 # })
-Layout/IndentFirstHashElement:
+Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
 
-# Allow rescuing and no-op-ing
-Lint/HandleExceptions:
-  AllowComments: true
-
 # Bump default from 80 - 120 chars
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
+
+# Allow rescuing and no-op-ing
+Lint/SuppressedException:
+  AllowComments: true
 
 # Prefer `rescue => ex`
 Naming/RescuedExceptionsVariableName:
   PreferredName: ex
 
 # Allow short but clear param names
-Naming/UncommunicativeMethodParamName:
+Naming/MethodParameterNam:
   AllowedNames:
     - cc
     - to
@@ -76,10 +76,6 @@ Performance/OpenStruct:
 #################
 # Disabled Cops #
 #################
-
-# Cannot work out how to enforce braces in multi-line hash, whilst removing them in single-line.
-Style/BracesAroundHashParameters:
-  Enabled: false
 
 # This rule rarely makes things more readable
 Style/ConditionalAssignment:
