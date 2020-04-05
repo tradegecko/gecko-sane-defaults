@@ -63,7 +63,7 @@ Naming/RescuedExceptionsVariableName:
   PreferredName: ex
 
 # Allow short but clear param names
-Naming/MethodParameterNam:
+Naming/MethodParameterName:
   AllowedNames:
     - cc
     - to
