@@ -113,3 +113,15 @@ Style/TrailingCommaInArrayLiteral:
 # Context-dependent
 Style/TrailingCommaInHashLiteral:
   Enabled: false
+
+# Context-dependent
+Style/HashEachMethods:
+  Enabled: false
+
+# Context-dependent
+Style/HashTransformKeys:
+  Enabled: false
+
+# Context-dependent
+Style/HashTransformValues:
+  Enabled: false
