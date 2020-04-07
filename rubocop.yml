@@ -73,6 +73,15 @@ Naming/MethodParameterName:
 Performance/OpenStruct:
   Enabled: true
 
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
 #################
 # Disabled Cops #
 #################
@@ -112,16 +121,4 @@ Style/TrailingCommaInArrayLiteral:
 
 # Context-dependent
 Style/TrailingCommaInHashLiteral:
-  Enabled: false
-
-# Context-dependent
-Style/HashEachMethods:
-  Enabled: false
-
-# Context-dependent
-Style/HashTransformKeys:
-  Enabled: false
-
-# Context-dependent
-Style/HashTransformValues:
   Enabled: false
