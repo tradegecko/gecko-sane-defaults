@@ -73,6 +73,10 @@ Naming/MethodParameterName:
 Performance/OpenStruct:
   Enabled: true
 
+#########################################################################
+# Pending Cops (To revisit the default value when rubocop 1.0 released) #
+#########################################################################
+
 Style/HashEachMethods:
   Enabled: true
 
