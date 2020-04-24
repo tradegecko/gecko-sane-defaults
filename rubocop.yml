@@ -126,3 +126,7 @@ Style/TrailingCommaInArrayLiteral:
 # Context-dependent
 Style/TrailingCommaInHashLiteral:
   Enabled: false
+
+# Context-dependent, most of our numbers are IDs and don't need underscores
+Style/NumericLiterals:
+  Enabled: false
