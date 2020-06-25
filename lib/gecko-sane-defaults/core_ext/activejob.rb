@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-if ActiveJob::VERSION::STRING.in?(['5.2.4.1', '6.0.2.2', '6.0.3', '6.0.3.1'])
+active_job_version = Gem::Version.new(ActiveJob::VERSION::STRING)
+
+if active_job_version >= Gem::Version.new('5.2.4.1') && active_job_version < Gem::Version.new('6.1')
   # No need to log error backtraces, they're already sent to Honeybadger
   # See https://github.com/rails/rails/blob/master/activejob/lib/active_job/log_subscriber.rb
   module ActiveJobLogExt
