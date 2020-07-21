@@ -3,11 +3,12 @@ Library for sharing sane defaults across TG apps
 
 #### Current defaults:
 - Deprecations raise in development/test and fire to Honeybadger in production
-- Rails migration generator generates with `frozen_string_literal`
+- Rails migration generator now generates with the `#frozen_string_literal: true` pragma
 - Sidekiq/ActiveJob don't log exception backtraces as this data is in Honeybadger
+- Shared rubocop.yml
+- Acceptable OSS License list integrated with papers gem
 
 #### Possible Enhancements
 - Essential gems
-- Shared rubocop.yml
-- frozen_string_literal on other generatorrs
+- frozen_string_literal on other generators
 - An Ember version
