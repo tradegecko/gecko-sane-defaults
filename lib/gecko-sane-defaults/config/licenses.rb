@@ -22,9 +22,15 @@ Papers.configure do |config|
     'GPL-2.0', 'GPL-2.0+', 'GPLv2+',
     'GPL-3.0',
 
+    # GPL-like
     'Ruby', 'ruby',
+
+    # Public Domain
     'Unlicense',
-    'ISC'
+
+    # MIT-like
+    'ISC',
+    'Hippocratic-2.1'
   ]
 
   # Commercial-friendly.
