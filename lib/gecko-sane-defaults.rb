@@ -7,7 +7,8 @@ if defined?(Rails)
   require 'gecko-sane-defaults/railties/deprecations'
   require 'gecko-sane-defaults/core_ext/activejob' if defined?(ActiveJob)
 
-  if Rails.env.development?
+  if Rails.env.development? || Rails.env.test?
+    require 'gecko-sane-defaults/railties/tasks'
     require 'gecko-sane-defaults/core_ext/frozen_string_literal'
   end
 end
