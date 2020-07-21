@@ -1,3 +1,6 @@
+# Unreleased
+- Central acceptable license list & Papers gem integration
+
 # 0.1.0 (2019-09-17)
 - Rubocop defaults
 
