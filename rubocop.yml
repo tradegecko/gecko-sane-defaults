@@ -4,6 +4,7 @@ require:
 
 AllCops:
   DisplayStyleGuide: true
+  NewCops: enable
   Exclude:
     - bin/**/*
     - db/schema.rb
