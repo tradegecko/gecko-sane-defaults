@@ -2,7 +2,7 @@
 
 active_job_version = Gem::Version.new(ActiveJob::VERSION::STRING)
 
-if active_job_version >= Gem::Version.new('5.2.4.1') && active_job_version < Gem::Version.new('6.1')
+if active_job_version >= Gem::Version.new('5.2.4.1') && active_job_version < Gem::Version.new('6.2')
   # No need to log error backtraces, they're already sent to Honeybadger
   # See https://github.com/rails/rails/blob/master/activejob/lib/active_job/log_subscriber.rb
   module ActiveJobLogExt
@@ -11,7 +11,7 @@ if active_job_version >= Gem::Version.new('5.2.4.1') && active_job_version < Gem
       ex = event.payload[:exception_object]
       if ex
         error do
-          "Error performing #{job.class.name} (Job ID: #{job.job_id}) from #{queue_name(event)} in #{event.duration.round(2)}ms: #{ex.class} (#{ex.message}):"
+          "Error performing #{job.class.name} (Job ID: #{job.job_id}) from #{queue_name(event)} in #{event.duration.round(2)}ms: #{ex.class} (#{ex.message})"
         end
       elsif event.payload[:aborted]
         error do
