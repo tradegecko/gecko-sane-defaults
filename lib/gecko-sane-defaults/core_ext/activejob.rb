@@ -26,7 +26,11 @@ if active_job_version >= Gem::Version.new('5.2.4.1') && active_job_version < Gem
   end
 
   require 'active_job/base'
-  ActiveJob::Logging::LogSubscriber.prepend(ActiveJobLogExt)
+  if defined? ActiveJob::LogSubscriber
+    ActiveJob::LogSubscriber.prepend(ActiveJobLogExt)
+  else
+    ActiveJob::Logging::LogSubscriber.prepend(ActiveJobLogExt)
+  end
 else
   puts("Could not find monkey-patch for activejob-#{ActiveJob::VERSION::STRING} in gecko-sane-defaults.")
 end
